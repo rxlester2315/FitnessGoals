@@ -23,13 +23,15 @@
                         <div class="col-md-7">
                             <div class="card-body">
                                 <div class="brand-wrapper">
-                                    <a href="">
+                                    <a href="{{url('/')}}">
                                         <img src="loginss/assets/images/logoz.png" alt="logo" class="logo">
 
                                     </a>
                                 </div>
                                 <p class="login-card-description">Sign into your account</p>
-                                <form action="#!">
+                                <form action="{{ route('store.logins') }}" method="POST">
+                                    @csrf
+                                    <!-- CSRF token -->
                                     <div class="form-group">
                                         <label for="email" class="sr-only">Email</label>
                                         <input type="email" name="email" id="email" class="form-control"
@@ -40,9 +42,11 @@
                                         <input type="password" name="password" id="password" class="form-control"
                                             placeholder="***********">
                                     </div>
-                                    <input name="login" id="login" class="btn btn-block login-btn mb-4" type="button"
-                                        value="Login">
+
+                                    <button type="submit" class="btn btn-block login-btn mb-4">Login</button>
                                 </form>
+
+
                                 <a href="#!" class="forgot-password-link">Forgot password?</a>
                                 <p class="login-card-footer-text">Don't have an account? <a href="{{url('register')}}"
                                         class="text-reset">Register here</a></p>

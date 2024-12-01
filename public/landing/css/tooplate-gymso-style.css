@@ -1,0 +1,1064 @@
+/*
+
+Tooplate 2119 Gymso Fitness
+
+https://www.tooplate.com/view/2119-gymso-fitness
+
+*/
+
+@font-face {
+    font-family: "Plain";
+    src: url("../fonts/Plain-Regular.woff2") format("woff2"),
+        url("../fonts/Plain-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Plain";
+    src: url("../fonts/Plain-Light.woff2") format("woff2"),
+        url("../fonts/Plain-Light.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Plain";
+    src: url("../fonts/Plain-Bold.woff2") format("woff2"),
+        url("../fonts/Plain-Bold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+}
+
+:root {
+    --primary-color: #f13a11;
+    --white-color: #ffffff;
+    --dark-color: #171819;
+    --about-bg-color: #f9f9f9;
+
+    --gray-color: #909090;
+    --link-color: #404040;
+    --p-color: #666262;
+
+    --base-font-family: "Plain", sans-serif;
+    --font-weight-bold: bold;
+    --font-weight-normal: normal;
+    --font-weight-light: 300;
+    --font-weight-thin: 100;
+
+    --h1-font-size: 48px;
+    --h2-font-size: 36px;
+    --h3-font-size: 28px;
+    --h4-font-size: 24px;
+    --h5-font-size: 22px;
+    --h6-font-size: 22px;
+    --p-font-size: 18px;
+    --base-font-size: 16px;
+    --menu-font-size: 14px;
+
+    --border-radius-large: 100%;
+    --border-radius-small: 2px;
+}
+
+body {
+    background: var(--white-color);
+    font-family: var(--base-font-family);
+}
+
+/*---------------------------------------
+     TYPOGRAPHY              
+  -----------------------------------------*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: var(--font-weight-thin);
+    line-height: normal;
+}
+
+h1 {
+    font-size: var(--h1-font-size);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    margin: 20px 0;
+}
+
+h2 {
+    font-size: var(--h2-font-size);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: -2px;
+}
+
+h3 {
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: -1px;
+    margin: 0;
+}
+
+h4 {
+    font-size: var(--h4-font-size);
+}
+
+h5 {
+    font-size: var(--h5-font-size);
+}
+
+h6 {
+    color: var(--gray-color);
+    font-size: var(--h6-font-size);
+    line-height: inherit;
+    margin: 0;
+}
+
+p {
+    color: var(--p-color);
+    font-size: var(--p-font-size);
+    font-weight: var(--font-weight-light);
+    line-height: 1.5em;
+}
+
+b,
+strong {
+    font-weight: var(--font-weight-bold);
+    letter-spacing: 0;
+}
+
+.section {
+    padding: 7rem 0;
+}
+
+/* BUTTON */
+
+.custom-btn {
+    background: transparent;
+    border-radius: var(--border-radius-small);
+    padding: 14px 24px;
+    color: var(--white-color);
+    font-size: var(--menu-font-size);
+    font-weight: var(--font-weight-normal);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+.custom-btn:hover {
+    color: var(--primary-color);
+}
+
+.custom-btn:focus {
+    box-shadow: none;
+}
+
+.custom-btn.bordered:hover,
+.custom-btn.bordered:focus,
+.custom-btn.bg-color:hover,
+.custom-btn.bg-color:focus {
+    background: var(--white-color);
+    border-color: transparent;
+    color: var(--primary-color);
+}
+
+.bordered {
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.bg-color {
+    background: var(--primary-color);
+    color: var(--white-color);
+}
+
+/*---------------------------------------
+     GENERAL               
+  -----------------------------------------*/
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+a {
+    color: var(--link-color);
+    font-weight: normal;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+a:hover,
+a:active,
+a:focus {
+    color: var(--primary-color);
+    outline: none;
+    text-decoration: none;
+}
+
+/* BG OVERLAY */
+
+.bg-overlay {
+    background: var(--dark-color);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.85;
+}
+
+/*---------------------------------------
+     MODAL              
+  -----------------------------------------*/
+
+.modal-content {
+    padding: 2rem 3rem;
+}
+
+.modal-header,
+.modal-body,
+.modal-footer {
+    border: 0;
+    padding: 0;
+}
+
+.membership-form a {
+    color: var(--primary-color);
+}
+
+/*---------------------------------------
+    FEATURE          
+  -----------------------------------------*/
+
+.feature {
+    background: var(--dark-color);
+    padding: 5rem 0;
+}
+
+/*---------------------------------------
+     MENU             
+  -----------------------------------------*/
+
+.navbar {
+    background: var(--dark-color);
+    padding: 1rem;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+.navbar-brand {
+    color: var(--white-color);
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-weight-bold);
+    line-height: normal;
+    padding-top: 0;
+}
+
+.nav-item .nav-link {
+    display: block;
+    color: var(--white-color);
+    font-size: var(--menu-font-size);
+    font-weight: var(--font-weight-normal);
+    text-transform: uppercase;
+    padding: 2px 6px;
+}
+
+.nav-item .nav-link.active,
+.nav-item .nav-link:hover {
+    color: var(--primary-color);
+}
+
+.navbar .social-icon li a {
+    color: var(--white-color);
+}
+
+.navbar-toggler {
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    margin: 0 10px 0 0;
+    width: 30px;
+    height: 35px;
+    outline: none;
+}
+
+.navbar-toggler:focus {
+    outline: none;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+    background: transparent;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before,
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::after {
+    transition: top 300ms 50ms ease, -webkit-transform 300ms 350ms ease;
+    transition: top 300ms 50ms ease, transform 300ms 350ms ease;
+    transition: top 300ms 50ms ease, transform 300ms 350ms ease,
+        -webkit-transform 300ms 350ms ease;
+    top: 0;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before {
+    transform: rotate(45deg);
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::after {
+    transform: rotate(-45deg);
+}
+
+.navbar-toggler .navbar-toggler-icon {
+    background: var(--primary-color);
+    transition: background 10ms 300ms ease;
+    display: block;
+    width: 30px;
+    height: 2px;
+    position: relative;
+}
+
+.navbar-toggler .navbar-toggler-icon::before,
+.navbar-toggler .navbar-toggler-icon::after {
+    transition: top 300ms 350ms ease, -webkit-transform 300ms 50ms ease;
+    transition: top 300ms 350ms ease, transform 300ms 50ms ease;
+    transition: top 300ms 350ms ease, transform 300ms 50ms ease,
+        -webkit-transform 300ms 50ms ease;
+    position: absolute;
+    right: 0;
+    left: 0;
+    background: var(--primary-color);
+    width: 30px;
+    height: 2px;
+    content: "";
+}
+
+.navbar-toggler .navbar-toggler-icon::before {
+    top: -8px;
+}
+
+.navbar-toggler .navbar-toggler-icon::after {
+    top: 8px;
+}
+
+/*---------------------------------------
+     HERO              
+  -----------------------------------------*/
+
+.hero {
+    background-image: url("../images/hero-bg.jpg");
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    min-height: 100vh;
+    position: relative;
+}
+
+/*---------------------------------------
+     CLASS               
+  -----------------------------------------*/
+
+.class-info {
+    background: var(--white-color);
+    box-shadow: 6px 0 38px rgba(20, 20, 20, 0.1);
+    border-radius: 0 0 2px 2px;
+    padding: 1rem 2rem;
+    position: relative;
+}
+
+.class-info img {
+    border-radius: 2px 2px 0 0;
+}
+
+.class-info strong {
+    color: var(--gray-color);
+}
+
+.class-price {
+    background: var(--primary-color);
+    border-radius: var(--border-radius-large);
+    color: var(--white-color);
+    font-weight: var(--font-weight-bold);
+    display: block;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    line-height: 3.5rem;
+    text-align: center;
+}
+
+/*---------------------------------------
+     SCHEDULE             
+  -----------------------------------------*/
+
+.schedule {
+    background: var(--dark-color);
+}
+
+.schedule-table {
+    display: table;
+    border: 0;
+    text-align: center;
+}
+
+.schedule-table strong,
+.schedule-table span {
+    display: block;
+    text-align: center;
+}
+
+.schedule-table strong {
+    color: var(--white-color);
+}
+
+.schedule-table span {
+    color: var(--gray-color);
+}
+
+.schedule-table span,
+.schedule-table small {
+    font-size: var(--menu-font-size);
+    text-transform: uppercase;
+}
+
+.schedule-table small {
+    position: relative;
+    top: 10px;
+}
+
+.table .thead-light th,
+.schedule-table tr td:first-child {
+    background: var(--primary-color);
+    border: 1px solid #212122;
+    color: var(--white-color);
+}
+
+.schedule-table .thead-light th {
+    border-bottom: 0;
+    text-transform: uppercase;
+}
+
+.table-bordered td,
+.table-bordered th {
+    border: 1px solid #212122;
+}
+
+.table-bordered td {
+    padding-bottom: 22px;
+}
+
+.table td,
+.table th {
+    padding: 1rem;
+}
+
+/*---------------------------------------
+      ABOUT & TEAM            
+  -----------------------------------------*/
+
+.about {
+    background: var(--about-bg-color);
+}
+
+.about-working-hours {
+    border-left: 2px solid;
+    padding-left: 3.5rem;
+}
+
+.about-working-hours strong {
+    color: var(--white-color);
+    opacity: 0.85;
+}
+
+.team-thumb {
+    position: relative;
+}
+
+.team-info {
+    background: var(--white-color);
+    border-radius: 0 0 2px 2px;
+    box-shadow: 6px 0 38px rgba(20, 20, 20, 0.1);
+    padding: 20px;
+    position: relative;
+}
+
+.team-info span {
+    font-weight: var(--font-weight-light);
+    opacity: 0.85;
+}
+
+.team-info .social-icon {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.team-info .social-icon li {
+    display: block;
+}
+
+/*---------------------------------------
+     CONTACT              
+  -----------------------------------------*/
+
+.webform input,
+button#submit-button {
+    height: calc(2.25rem + 20px);
+}
+
+.form-control {
+    border-radius: var(--border-radius-small);
+    margin: 1.3rem 0;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: var(--dark-color);
+}
+
+button#submit-button {
+    background: var(--dark-color);
+    border-color: transparent;
+    color: var(--white-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button#submit-button:hover {
+    background: var(--primary-color);
+}
+
+.contact h2 + p {
+    max-width: 90%;
+}
+
+.google-map {
+    border-top: 1px solid #efebeb;
+    margin-top: 2.5rem;
+    padding-top: 2.5rem;
+}
+
+.google-map iframe {
+    width: 100%;
+}
+
+/*---------------------------------------
+     FOOTER              
+  -----------------------------------------*/
+
+.site-footer {
+    border-top: 1px solid #efebeb;
+    padding: 3rem 0;
+}
+
+.site-footer a {
+    color: var(--p-color);
+    font-weight: var(--font-weight-light);
+}
+
+.site-footer p {
+    font-size: var(--base-font-size);
+}
+
+.contact .fa,
+.site-footer .fa {
+    color: var(--primary-color);
+}
+
+/*---------------------------------------
+     SOCIAL ICON              
+  -----------------------------------------*/
+
+.social-icon {
+    position: relative;
+    padding: 0;
+    margin: 5px 0 0 0;
+}
+
+.social-icon li {
+    display: inline-block;
+    list-style: none;
+}
+
+.social-icon li a {
+    text-decoration: none;
+    display: inline-block;
+    color: var(--p-color);
+    font-size: var(--p-font-size);
+    font-weight: var(--font-weight-bold);
+    margin: 5px 10px;
+    text-align: center;
+}
+
+.social-icon li a:hover {
+    color: var(--primary-color);
+}
+
+/*---------------------------------------
+     RESPONSIVE STYLES              
+  -----------------------------------------*/
+
+@media screen and (max-width: 992px) {
+    .section {
+        padding: 5rem 0;
+    }
+
+    .nav-item .nav-link {
+        padding: 6px;
+    }
+
+    .navbar .social-icon {
+        margin-top: 22px;
+    }
+
+    .navbar-collapse,
+    .site-footer {
+        text-align: center;
+    }
+
+    .schedule-table {
+        display: block;
+    }
+
+    .modal-content {
+        padding: 2rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    h1 {
+        font-size: 38px;
+    }
+
+    .about-working-hours {
+        border-left: 0;
+        padding: 22px 0 0 0;
+    }
+
+    .contact h2 span {
+        display: block;
+    }
+}
+
+.logos {
+    width: 60px;
+    border-radius: 50%;
+}
+
+.profile {
+    border: 1px solid white;
+    border-radius: 12px;
+    padding: 0 30px 0 30px;
+    margin: 10px;
+}
+.profile a {
+    color: white;
+}
+
+.cardss {
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    display: flex; /* Use flexbox to align items properly */
+    flex-wrap: wrap; /* Allow items to wrap on the next line */
+}
+
+.card-container {
+    border: 1px solid black;
+    border-radius: 12px;
+    width: 300px; /* Fixed width for each card */
+    height: 200px; /* Fixed height for each card */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+    box-sizing: border-box; /* Ensure padding does not affect width/height */
+    position: relative; /* Needed for absolute positioning of the text */
+    overflow: hidden; /* Ensure content doesn't overflow the container */
+}
+
+.image-container {
+    position: relative; /* This will be the reference point for positioning text */
+    width: 100%;
+    height: 100%;
+}
+
+.imagesss {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the container without distortion */
+    border-radius: 8px; /* Optional: Add rounded corners to the image */
+}
+
+.info {
+    position: absolute; /* Position the text absolutely within the container */
+    top: 50%; /* Vertically center the text */
+    left: 50%; /* Horizontally center the text */
+    transform: translate(-50%, -50%); /* Fine-tune centering */
+    color: white; /* White text color */
+    font-size: 24px; /* Adjust text size */
+    text-align: center; /* Center the text */
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7); /* Stronger shadow on hover */
+}
+
+.info span {
+    font-size: 16px; /* Smaller font for the span text */
+    display: block;
+}
+
+.bview {
+    padding: 10px;
+    font-size: 10px;
+    color: white;
+}
+
+.bview i {
+    color: white;
+    border: 1px solid white;
+    font-size: 50px;
+    border-radius: 50%;
+}
+
+.split {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 36px; /* Adjust size as needed */
+    font-weight: 700; /* Make the text bold for better impact */
+    text-transform: uppercase; /* Optional: Make the text uppercase for a modern touch */
+    letter-spacing: 2px; /* Optional: Adds spacing between letters */
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3),
+        0 0 25px rgba(255, 255, 255, 0.5), 0 0 5px rgba(0, 0, 0, 0.5);
+    /* First shadow: subtle 3px offset shadow for depth */
+    /* Second shadow: glowing white effect */
+    /* Third shadow: another subtle dark shadow for contrast */
+}
+
+.sideprofilezz {
+    position: absolute;
+    left: 200px;
+    width: 315px;
+    height: 600px;
+    border-radius: 12px;
+    background: linear-gradient(to right, black, gray);
+}
+
+.imahe {
+    border: 1px solid black;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 25px 0 0 100px;
+}
+
+.infozz {
+    margin-top: 10px;
+
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 20px; /* Adjust size as needed */
+    font-weight: 700; /* Make the text bold for better impact */
+    text-transform: uppercase; /* Optional: Make the text uppercase for a modern touch */
+    letter-spacing: 2px; /* Optional: Adds spacing between letters */
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3),
+        0 0 25px rgba(255, 255, 255, 0.5), 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.cardssz img {
+    object-fit: cover;
+}
+
+.moreinfo h3 {
+    font-size: 15px;
+}
+
+.trainers {
+    border: 1px solid black;
+}
+
+.moreinfo {
+    font-size: 15px;
+}
+
+.section-title {
+    padding: 5px;
+}
+
+.btnn {
+    margin-top: 100px;
+    transition: transform 0.3s ease;
+}
+
+.btnn:hover {
+    transform: scale(1.1);
+}
+
+@media screen and (min-width: 310px) {
+    .cardss {
+        margin-top: 800px;
+    }
+
+    .split {
+        position: absolute;
+        top: 800px;
+    }
+
+    .sideprofilezz {
+        height: 500px;
+
+        position: absolute;
+        top: 250px;
+        left: 50px;
+    }
+}
+
+@media screen and(min-height: 700px) {
+    .cardss {
+        margin-top: 500px;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    .cardss {
+        margin: 100px 0 0 200px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .split {
+        position: absolute;
+        top: 100px;
+        left: 700px;
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .sideprofilezz {
+        position: absolute;
+        top: 100px;
+        right: 150px;
+        left: 30px;
+    }
+}
+
+@media screen and(min-width: 1100px) {
+    .cardss {
+        margin-top: 1000px;
+    }
+}
+
+@media screen and(max-width: 2100px) {
+    .sideprofilezz {
+        position: absolute;
+        left: 1001px;
+    }
+}
+
+.yogaas {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container for the yoga cards */
+.yogacards-container {
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(
+        3,
+        350px
+    ); /* Create 3 columns, each 350px wide */
+    gap: 20px; /* Space between cards */
+    justify-content: center; /* Center the grid items horizontally */
+    flex-wrap: wrap; /* Optional: for wrapping on smaller screens */
+}
+
+/* Individual card styling */
+.yogacards {
+    width: 300px; /* Set fixed width for each card */
+    height: auto; /* Adjust height based on content */
+    display: flex; /* Use flexbox to align image and content */
+    flex-direction: column; /* Stack image and content vertically */
+    align-items: center; /* Center content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add shadow */
+    border-radius: 8px; /* Rounded corners for the card */
+    overflow: hidden; /* Ensures no content overflows the card */
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.9),
+        rgba(20, 20, 20, 1)
+    );
+
+    margin-top: 30px;
+}
+
+/* Style for the image */
+.yogacards img {
+    width: 100%; /* Ensure image takes full width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover;
+}
+
+/* Style for the info card */
+.infocard {
+    padding: 15px;
+    text-align: center;
+}
+
+/* Add a modern text shadow to the heading */
+.infocard h3 {
+    margin-bottom: 10px;
+    font-size: 1.6rem; /* Increase font size */
+    color: #fff; /* Set the text color to white */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2),
+        0 0 25px rgba(255, 255, 255, 0.2);
+    /* text-shadow format: horizontal offset, vertical offset, blur radius, color */
+}
+
+/* Add subtle text shadow for paragraphs */
+.infocard p {
+    font-size: 14px;
+    color: #fff; /* Set the text color to white */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Optional: Add hover effect to the cards */
+.yogacards:hover {
+    transform: translateY(-5px); /* Lift the card on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ccards img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    justify-content: center;
+    align-items: center;
+}
+
+.ccards {
+    border: 1px solid black;
+    display: inline-flex;
+    padding: 10px;
+    margin: 30px;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 12px;
+    background-color: #212122;
+}
+.infocoach {
+    text-align: center;
+    color: #fff; /* Set the text color to white */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2),
+        0 0 25px rgba(255, 255, 255, 0.2);
+}
+
+.infocoach p {
+    color: white;
+}
+
+.outerimage img {
+    border-radius: 3px;
+    width: 350px;
+}
+
+.position {
+    font-size: 13px;
+    font-style: italic;
+}
+
+.messagecoach {
+    font-size: 12px;
+    max-width: 350px; /* Set a maximum width to control how much the text spans */
+    line-height: 1.5; /* Adjust line spacing for readability */
+    overflow: hidden;
+}
+
+.socialacc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Remove the default bullets and padding/margin */
+ul.socialacc {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+}
+
+ul.socialacc a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 24px;
+}
+
+ul.socialacc a i {
+    transition: transform 0.3s ease; /* Apply transition to icons */
+}
+
+ul.socialacc a:hover i {
+    transform: scale(1.2);
+    color: #f13a11;
+}
+
+.coach-container {
+    grid-template-columns: repeat(4, max-content);
+    display: grid;
+    justify-content: center;
+}
+.contak {
+    margin: 30px;
+}
+
+.memberprofile {
+    border: 1px solid black;
+    border-radius: 12px;
+    width: 1300px;
+    height: 700px;
+    display: inline-flex;
+    flex-direction: column; /* Adjust the layout if needed */
+    padding: 10px;
+}
+
+.profileimg {
+    border: 1px solid black;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    margin: 15px 0 0 30px;
+}
+
+.memberinfo {
+    text-align: center;
+    margin-top: 80px;
+}
+
+.maininfo {
+    margin-top: -150px;
+    text-align: center;
+}

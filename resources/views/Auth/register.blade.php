@@ -10,6 +10,13 @@
         <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="loginss/assets/css/login.css">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"
+            integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer">
+        </script>
+
+
     </head>
 
     <body>
@@ -23,14 +30,18 @@
                         <div class="col-md-7">
                             <div class="card-body">
                                 <div class="brand-wrapper">
-                                    <a href="">
+                                    <a href="{{url('/')}}">
                                         <img src="loginss/assets/images/logoz.png" alt="logo" class="logo">
 
                                     </a>
                                 </div>
                                 <p class="login-card-description">Register Account</p>
-                                <form action="#!">
-                                    <div class="form-group">Name
+                                <form action="{{ route('accountregister') }}" method="POST">
+                                    @csrf
+                                    <!-- Don't forget CSRF protection! -->
+
+                                    <div class="form-group">
+                                        Name
                                         <label for="name" class="sr-only">Name</label>
                                         <input type="text" name="name" id="name" class="form-control"
                                             placeholder="Enter Your Name">
@@ -48,15 +59,16 @@
                                             placeholder="Enter Password">
                                     </div>
 
-                                    <div class="form-group mb-4">Confirm Password
+                                    <div class="form-group mb-4">
+                                        Confirm Password
                                         <label for="password" class="sr-only">Confirm Password</label>
-                                        <input type="password" name="password" id="password" class="form-control"
-                                            placeholder="Confirm Password" required>
+                                        <input type="password" name="password_confirmation" id="password_confirmation"
+                                            class="form-control" placeholder="Confirm Password" required>
                                     </div>
 
-                                    <input name="login" id="login" class="btn btn-block login-btn mb-4" type="button"
-                                        value="Login">
+                                    <button type="submit" class="btn btn-block login-btn mb-4">Register</button>
                                 </form>
+
                                 <a href="#!" class="forgot-password-link">Forgot password?</a>
                                 <a href="{{url('login')}}">
                                     <p class="login-card-footer-text">Already have an Account?</p>
@@ -69,6 +81,20 @@
                         </div>
                     </div>
                 </div>
+
+
+                @if(Session::has('message'))
+                <script>
+                swal("Message", "{{Session::get('message')}}", 'success', {
+                    button: true,
+                    button: "Okay",
+                    timer: 3000,
+
+
+                });
+                </script>
+                @endif
+
 
                 <!-- <div class="card login-card">
         <img src="assets/images/login.jpg" alt="login" class="login-card-img">
