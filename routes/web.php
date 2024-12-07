@@ -47,6 +47,15 @@ Route::get('/listcoach',[HomeController::class,'coaches']);
 
 Route::get('/myprofile',[HomeController::class,'profile']);
 
+// ernoll
+Route::get('/enrollstrength',[HomeController::class,'enrollstrengthview']);
+Route::post('/subscrip_coach',[HomeController::class,'enrollstore'])->name('store.subscriptionss');
+
+
+
+//enroll list request
+Route::get('/enrollclasses',[HomeController::class,'enrolllistview']);
+
 
 
 // add coaches

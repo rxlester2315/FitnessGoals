@@ -915,8 +915,9 @@ button#submit-button:hover {
 /* Style for the image */
 .yogacards img {
     width: 100%; /* Ensure image takes full width */
-    height: auto; /* Maintain aspect ratio */
+    height: 200px; /* Maintain aspect ratio */
     object-fit: cover;
+    object-position: center;
 }
 
 /* Style for the info card */
@@ -1061,4 +1062,353 @@ ul.socialacc a:hover i {
 .maininfo {
     margin-top: -150px;
     text-align: center;
+}
+
+.cardavail {
+    border: 1px solid black;
+    border-radius: 12px;
+    padding: 10px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 300px;
+    height: 600px;
+    background-color: #171819;
+    cursor: pointer;
+    overflow: hidden;
+    border: 4px solid #efebeb;
+
+    transition: all 0.3s ease;
+}
+
+.cardavail:hover {
+    border-color: #f13a11;
+}
+
+.cardavail input {
+    display: none;
+}
+
+.cardavail .card-content {
+    padding: 16px;
+    text-align: center;
+}
+
+.cardavail img {
+    width: 100%;
+    height: 200px;
+    border: 1px solid white;
+    padding: 7px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.availcoach {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 50px;
+}
+
+.namecoach {
+    color: #efebeb;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adding the text-shadow */
+}
+
+.titlez {
+    color: #efebeb;
+    font-size: 13px;
+    font-style: italic;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adding the text-shadow */
+}
+
+/* General infoavail container styling */
+.infoavail {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-family: "Arial", sans-serif;
+    color: #efebeb;
+    font-size: 16px;
+    padding: 20px;
+    background-color: #2d2d2d;
+    border-radius: 8px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adding the text-shadow */
+}
+
+/* Styling for each item (icon + text) */
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Icon styling */
+.info-item i {
+    font-size: 30px;
+    color: #f0b429; /* Accent color */
+}
+
+/* Text within info-item */
+.info-text,
+.certifications li {
+    font-size: 14px;
+    color: #efebeb;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adding the text-shadow */
+}
+
+/* Certifications list styling */
+.certifications {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.certifications li {
+    padding: 5px 0;
+    font-size: 14px;
+    color: #efebeb;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adding the text-shadow */
+}
+
+/* Hover effect for the list items */
+.certifications li:hover {
+    color: #f0b429; /* Accent color */
+    cursor: pointer;
+}
+
+.cardsession {
+    border-radius: 12px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 20px;
+    width: 200px;
+    height: 120px;
+    overflow: hidden;
+    cursor: pointer;
+    flex-direction: column;
+    background-color: #404040;
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transition for zoom and background */
+}
+
+.cardsession input {
+    display: none;
+}
+
+.cardsession h3,
+.cardsession p {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adding the text-shadow */
+}
+
+.cardsession:has(input:checked) {
+    background-color: #f13a11;
+    border-color: #171819;
+}
+
+.card-content p {
+    font-size: 13px;
+    text-align: center;
+}
+
+.cardsession input:checked + .card-content::after {
+    content: "✔";
+    font-size: 15px;
+    color: green;
+    position: absolute;
+    top: 50px;
+    left: 60px;
+    background: #fff;
+    border-radius: 50%;
+    border: 2px solid black;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    justify-content: center;
+}
+
+.persession {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-top: 60px;
+}
+
+.sessionssz {
+    padding-top: 150px;
+    margin-left: 350px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adding the text-shadow */
+}
+
+.cardsession:hover {
+    transform: scale(1.1); /* Zoom effect (1.1 means 10% larger) */
+    background-color: #f13a11; /* Darker background color on hover */
+    border: 3px solid black;
+}
+
+.moreinfoss input {
+    border-radius: 8px;
+    width: 300px;
+    height: 45px;
+    border: 2px solid #404040;
+    margin: 30px;
+}
+.moreinfoss {
+    align-items: center;
+    justify-content: center;
+    margin-left: 500px;
+    padding-top: 25px;
+}
+
+.cardavail input:checked + .card-content {
+    border-color: black;
+    background-color: red;
+    position: relative;
+}
+
+.cardavail input:checked + .card-content::after {
+    content: "✔";
+    font-size: 24px;
+    color: green;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: #fff;
+    border-radius: 50%;
+    border: 2px solid black;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cardspayments {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.paymentcard {
+    display: inline-block;
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    padding: 5px;
+    transition: all 0.3s ease;
+}
+
+.paymentcard img {
+    display: block;
+    width: 100px;
+    /* Adjust the size as needed */
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added transition for smooth zoom effect */
+}
+
+.paymentcard img:hover {
+    transform: scale(1.1); /* Zoom in the image by 10% */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6); /* Optional: slightly stronger shadow on hover */
+}
+
+.paymentcard input {
+    display: none;
+    /* Hide the radio button */
+}
+
+.paymentcard input:checked + img {
+    border: 3px solid black;
+    /* Highlight color */
+    transform: scale(1.1);
+    /* Slight zoom effect */
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+
+.paymentcard input:checked + .paycounter {
+    border: 3px solid black;
+    /* Highlight color */
+    transform: scale(1.1);
+    /* Slight zoom effect */
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+
+.paycounter {
+    border: 2px solid white;
+    margin-left: 15px;
+    padding: 10px;
+    border-radius: 7px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(45deg, #ff4b5c, #ff1c1c);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.paycounter:hover {
+    transform: scale(1.1); /* Zoom in the image by 10% */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6); /* Optional: slightly stronger shadow on hover */
+}
+
+.paycounter h3 {
+    color: white;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7); /* Stronger shadow on hover */
+}
+
+.submitbtn {
+    border: 1px solid white;
+    background-color: #ff1c1c;
+    color: white;
+    padding: 15px;
+    font-size: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4), 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-left: 1300px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center; /* Horizontal centering */
+    align-items: center; /* Vertical centering */
+    height: 350px;
+}
+
+.table-classes {
+    border-collapse: collapse;
+    margin: 25px;
+    font-size: 0.9em;
+    min-width: 400px;
+    overflow: hidden;
+    border-radius: 5px 5px 0 0;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.table-classes th,
+.table-classes td {
+    padding: 20px;
+    text-align: center;
+}
+
+.table-classes thead {
+    background-color: #171819;
+    color: white;
+    text-align: left;
+    font-weight: bold;
+}
+
+.table-classes tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.table-classes tbody tr:last-of-type {
+    border-bottom: 3px solid #f13a11;
 }

@@ -128,11 +128,11 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ml-lg-auto">
                         <li class="nav-item">
-                            <a href="{{url('Non')}}" class="nav-link smoothScroll">Home</a>
+                            <a href="{{url('members')}}" class="nav-link smoothScroll">Home</a>
                         </li>
 
                         <li class="nav-item">
-                            <a href="#about" class="nav-link smoothScroll">About Us</a>
+                            <a href="{{url('enrollclasses')}}" class="nav-link smoothScroll">Enroll Classes</a>
                         </li>
 
                         <li class="nav-item dropdown">

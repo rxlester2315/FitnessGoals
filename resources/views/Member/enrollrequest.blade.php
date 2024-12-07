@@ -132,7 +132,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="#about" class="nav-link smoothScroll">About Us</a>
+                            <a href="{{url('enrollclasses')}}" class="nav-link smoothScroll">Enroll Classes</a>
                         </li>
 
                         <li class="nav-item dropdown">
@@ -156,7 +156,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="#contact" class="nav-link smoothScroll">List Trainer</a>
+                            <a href="{{url('listcoach')}}" class="nav-link smoothScroll">List Trainer</a>
                         </li>
 
 
@@ -166,7 +166,7 @@
                     <div class="profile">
                         <a href="#" class="profile-link">My Profile</a>
                         <div class="dropdown-menu">
-                            <a href="#">View Profile</a>
+                            <a href="{{url('myprofile')}}">View Profile</a>
                             <a href="#">Edit Profile</a>
                             <a href="{{route('logout')}}">Log Out</a>
                         </div>
@@ -186,97 +186,56 @@
 
 
 
+        <section class="requestclass section" id="requestclass">
+
+            <h1>List of Pending Classes</h1>
 
 
-        <section class="main section" id="mains">
+            <center>
+                <table class="table-classes">
+                    <thead>
+                        <tr>
+                            <th>Coach Name </th>
+                            <th>Class </th>
+                            <th>Payment Method </th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
 
-            <h1 class="yogaas">Strength Training</h1>
+                    <tbody>
+                        <tr>
+                            <td>Rex Lester</td>
+                            <td>Strength</td>
+                            <td>Gcash</td>
+                            <td>Payment Success</td>
+                        </tr>
 
-            <div class="yogacards-container">
-                <div class="yogacards">
-                    <img src="othercss/imagesss/strength/1.jpg" alt="">
-                    <div class="infocard">
-                        <h3>Bodyweight Training
-                        </h3>
-
-                        <p>Uses your own body weight as resistance. Examples include push-ups, squats, lunges, planks,
-                            and pull-ups.</p>
-                        <a href="{{url('enrollstrength')}}" class="btn-wrapper">
-                            <button class="btn btn-warning">Enroll Now</button>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="yogacards">
-                    <img src="othercss/imagesss/strength/2.jpg" alt="">
-                    <div class="infocard">
-                        <h3>Free Weights</h3>
-                        <p>Involves using dumbbells, barbells, or kettlebells to target specific muscles. Common
-                            exercises include bench presses, squats, deadlifts, and overhead presses.</p>
-
-                        <a href="{{url('enrollstrength')}}" class="btn-wrapper">
-                            <button class="btn btn-warning">Enroll Now</button>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="yogacards">
-                    <img src="othercss/imagesss/strength/3.jpg" alt="">
-                    <div class="infocard">
-                        <h3>Machine-Based Strength Training</h3>
-                        <p>Uses specialized machines to isolate specific muscle groups. Examples include leg press,
-                            chest press, and lat pull-down machines.</p>
-
-                        <a href="{{url('enrollstrength')}}" class="btn-wrapper">
-                            <button class="btn btn-warning">Enroll Now</button>
-                        </a>
-                    </div>
-                </div>
+                        <tr>
+                            <td>Rex Lester</td>
+                            <td>Strength</td>
+                            <td>Gcash</td>
+                            <td>Payment Success</td>
+                        </tr>
 
 
-
-                <div class="yogacards">
-                    <img src="othercss/imagesss/strength/4.jpg" alt="">
-                    <div class="infocard">
-                        <h3>Power lifting </h3>
-                        <p>Focuses on two main lifts: the clean and jerk, and the snatch. This is a highly technical
-                            form of strength training that requires a great deal of skill.</p>
-                        <a href="{{url('enrollstrength')}}" class="btn-wrapper">
-                            <button class="btn btn-warning">Enroll Now</button>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="yogacards">
-                    <img src="othercss/imagesss/strength/5.jpg" alt="">
-                    <div class="infocard">
-                        <h3>Circuit Training</h3>
-                        <p>Involves performing a series of strength exercises with little to no rest between each. It
-                            combines resistance training with cardiovascular conditioning.
-                        </p>
-                        <a href="{{url('enrollstrength')}}" class="btn-wrapper">
-                            <button class="btn btn-warning">Enroll Now</button>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="yogacards">
-                    <img src="othercss/imagesss/strength/6.jpg" alt="">
-                    <div class="infocard">
-                        <h3>CrossFit Training</h3>
-                        <p>A high-intensity strength and conditioning workout that incorporates Olympic lifting,
-                            bodyweight exercises, and cardiovascular activity.</p>
+                        <tr>
+                            <td>Rex Lester</td>
+                            <td>Strength</td>
+                            <td>Gcash</td>
+                            <td>Payment Success</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </center>
 
 
-                        <a href="{{url('enrollstrength')}}" class="btn-wrapper">
-                            <button class="btn btn-warning">Enroll Now</button>
-                        </a>
-
-                    </div>
-                </div>
-            </div>
 
         </section>
+
+
+
+
+
 
 
 
