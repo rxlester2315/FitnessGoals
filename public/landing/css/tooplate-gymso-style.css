@@ -1405,8 +1405,19 @@ ul.socialacc a:hover i {
     font-weight: bold;
 }
 
+.table-classes thead th {
+    padding: 40px 80px 40px;
+    text-align: center;
+}
+
 .table-classes tbody tr {
     border-bottom: 1px solid #dddddd;
+    transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+
+.table-classes tbody tr:hover {
+    transform: scale(1.05); /* Zoom in effect */
+    color: #f13a11;
 }
 
 .table-classes tbody tr:last-of-type {

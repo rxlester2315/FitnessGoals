@@ -24,5 +24,7 @@ class Subscription extends Model
         'phone_number',
         'sessiontrain',
         'paymentmethod',
+        'status',
+        'userid'
     ];
 }

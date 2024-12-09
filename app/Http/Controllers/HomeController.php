@@ -1,11 +1,14 @@
 <?php
 
 namespace App\Http\Controllers;
+use Auth;
 
 use Illuminate\Http\Request;
 use Notification;
+use Illuminate\Foundation\Auth\AuthenticatesUsers;
+
 use Illuminate\Support\Facades\Notifications;
-use App\Models\Subscription; // Assuming you have a Subscription model
+use App\Models\Subscription; 
 use App\Notifications\PaymentNotification;
 class HomeController extends Controller
 {
@@ -84,15 +87,28 @@ public function enrollstore(Request $request){
             'paymentmethod' => 'required|string',
         ]);
 
-        // Store the subscription data in the database
-        $subscription = Subscription::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'phone_number' => $request->phone_number,
-            'coachprefer' => $request->coachprefer,
-            'sessiontrain' => $request->sessiontrain,
-            'paymentmethod' => $request->paymentmethod,
-        ]);
+
+
+        $subscription = new Subscription;
+        $subscription->name = $request->name;
+        $subscription->email = $request->email;
+        $subscription->phone_number = $request->phone_number;
+        $subscription->coachprefer = $request->coachprefer;
+        $subscription->sessiontrain = $request->sessiontrain;
+        $subscription->paymentmethod = $request->paymentmethod;
+        $subscription->status = 'Pending';
+
+     if (Auth::id()) {
+    $subscription->userid = Auth::user()->id;
+} else {
+    dd('User is not authenticated');
+}
+
+       
+       $subscription->save();
+
+
+  
 
         // Send email notification to the user
         Notification::route('mail', $subscription->email)->notify(new PaymentNotification($subscription));
@@ -104,7 +120,12 @@ return redirect()->back()->with('message', 'Your subscription has been processed
 
 
 public function enrolllistview(){
+        $userId = Auth::id();
 
-    return view('Member.enrollrequest');
+
+  $data = Subscription::where('userid',$userId)->where('status','Pending')->get();
+
+
+    return view('Member.enrollrequest',compact('data'));
 }
 }

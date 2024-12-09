@@ -188,7 +188,9 @@
 
         <section class="requestclass section" id="requestclass">
 
-            <h1>List of Pending Classes</h1>
+            <center>
+                <h1>List of Pending Classes</h1>
+            </center>
 
 
             <center>
@@ -196,34 +198,34 @@
                     <thead>
                         <tr>
                             <th>Coach Name </th>
-                            <th>Class </th>
+                            <th>Session </th>
                             <th>Payment Method </th>
                             <th>Status</th>
                         </tr>
                     </thead>
 
+
                     <tbody>
+                        @foreach($data as $info)
                         <tr>
-                            <td>Rex Lester</td>
-                            <td>Strength</td>
-                            <td>Gcash</td>
-                            <td>Payment Success</td>
-                        </tr>
+                            <td>{{$info->coachprefer}}</td>
+                            <td>{{$info->sessiontrain}}</td>
+                            <td>{{$info->paymentmethod}}</td>
 
-                        <tr>
-                            <td>Rex Lester</td>
-                            <td>Strength</td>
-                            <td>Gcash</td>
-                            <td>Payment Success</td>
-                        </tr>
+                            <td>
+                                @if($info->status == 'Pending')
+                                <span class="badge badge-warning">{{ $info->status }}</span>
+                                @elseif($info->status == 'Denied')
+                                <span class="badge badge-danger">{{ $info->status }}</span>
+                                @elseif($info->status == 'Payment success')
+                                <span class="badge badge-success">{{ $info->status }}</span>
+                                @else
+                                <span class="badge badge-secondary">{{ $info->status }}</span>
+                                @endif
 
-
-                        <tr>
-                            <td>Rex Lester</td>
-                            <td>Strength</td>
-                            <td>Gcash</td>
-                            <td>Payment Success</td>
+                            </td>
                         </tr>
+                        @endforeach
                     </tbody>
                 </table>
             </center>
