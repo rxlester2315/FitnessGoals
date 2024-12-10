@@ -1259,11 +1259,21 @@ ul.socialacc a:hover i {
     border: 2px solid #404040;
     margin: 30px;
 }
+
+.moreinfoss select {
+    padding: 10px 50px 10px 50px;
+    border-radius: 8px;
+}
 .moreinfoss {
     align-items: center;
     justify-content: center;
     margin-left: 500px;
     padding-top: 25px;
+}
+
+.setime input {
+    width: 150px;
+    height: 50px;
 }
 
 .cardavail input:checked + .card-content {

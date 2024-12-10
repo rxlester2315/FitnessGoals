@@ -47,9 +47,25 @@ Route::get('/listcoach',[HomeController::class,'coaches']);
 
 Route::get('/myprofile',[HomeController::class,'profile']);
 
-// ernoll
+// ernoll strength 
 Route::get('/enrollstrength',[HomeController::class,'enrollstrengthview']);
 Route::post('/subscrip_coach',[HomeController::class,'enrollstore'])->name('store.subscriptionss');
+
+// ernoll pilate
+
+Route::get('/enrollpilates',[HomeController::class,'enrollpilate']);
+
+// ernoll zumba
+Route::get('/enrollzumbaa',[HomeController::class,'enrollzumba']);
+
+//enroll cardio
+
+Route::get('/enrollcardios',[HomeController::class,'enrollcardio']);
+
+
+
+
+
 
 
 

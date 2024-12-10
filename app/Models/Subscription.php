@@ -25,6 +25,7 @@ class Subscription extends Model
         'sessiontrain',
         'paymentmethod',
         'status',
-        'userid'
+        'userid',
+        'prefertime'
     ];
 }

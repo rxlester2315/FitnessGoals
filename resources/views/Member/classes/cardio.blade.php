@@ -202,8 +202,10 @@
                         </h3>
                         <p> This involves maintaining a consistent, moderate-intensity activity over a prolonged period.
                             Common examples include jogging, cycling, swimming, and rowing.</p>
-                        <button class="btn btn-warning">View Details</button>
+                        <a href="{{url('enrollcardios')}}">
+                            <button class="btn btn-warning">Enroll Now</button>
 
+                        </a>
                     </div>
                 </div>
 
@@ -215,7 +217,12 @@
                             low-intensity recovery or rest. This method can include activities like sprints, burpees, or
                             cycling sprints.</p>
 
-                        <button class="btn btn-warning">View Details</button>
+
+                        <a href="{{url('enrollcardios')}}">
+                            <button class="btn btn-warning">Enroll Now</button>
+
+                        </a>
+
                     </div>
                 </div>
 
@@ -226,7 +233,10 @@
                         <p>Exercises involving explosive movements such as jumping, skipping, and bounding. Examples
                             include jump squats, box jumps, and burpees.</p>
 
-                        <button class="btn btn-warning">View Details</button>
+                        <a href="{{url('enrollcardios')}}">
+                            <button class="btn btn-warning">Enroll Now</button>
+
+                        </a>
                     </div>
                 </div>
 
@@ -238,8 +248,10 @@
                         <h3>Fartlek Training </h3>
                         <p>A Swedish term meaning “speed play,” this type of training combines continuous running with
                             random, unstructured intervals of faster and slower-paced running.</p>
-                        <button class="btn btn-warning">View Details</button>
+                        <a href="{{url('enrollcardios')}}">
+                            <button class="btn btn-warning">Enroll Now</button>
 
+                        </a>
                     </div>
                 </div>
 
@@ -250,8 +262,10 @@
                         <p>Involves riding a bike at various intensities. Outdoor cycling is often more varied, while
                             indoor cycling (like spin classes) is typically structured with different intensity
                             intervals.</p>
-                        <button class="btn btn-warning">View Details</button>
+                        <a href="{{url('enrollcardios')}}">
+                            <button class="btn btn-warning">Enroll Now</button>
 
+                        </a>
                     </div>
                 </div>
 
@@ -261,8 +275,10 @@
                         <h3>Jump Rope </h3>
                         <p>Involves jumping over a rope that swings under your feet. It can be done as a steady-state
                             workout or in intervals.</p>
-                        <button class="btn btn-warning">View Details</button>
+                        <a href="{{url('enrollcardios')}}">
+                            <button class="btn btn-warning">Enroll Now</button>
 
+                        </a>
                     </div>
                 </div>
             </div>

@@ -203,7 +203,9 @@
                             Exercises are performed on a mat, using body weight for resistance. Common tools used
                             include small props like resistance bands, magic circles, and foam rollers
                         </p>
-                        <button class="btn btn-warning">View Details</button>
+                        <a href="{{url('enrollpilates')}}" class="btn-wrapper">
+                            <button class="btn btn-warning">Enroll Now</button>
+                        </a>
 
                     </div>
                 </div>
@@ -216,7 +218,10 @@
                             resistance. The springs can be set to provide different levels of resistance to challenge
                             different muscle groups</p>
 
-                        <button class="btn btn-warning">View Details</button>
+                        <a href="{{url('enrollpilates')}}" class="btn-wrapper">
+                            <button class="btn btn-warning">Enroll Now</button>
+                        </a>
+
                     </div>
                 </div>
 
@@ -228,7 +233,10 @@
                             help improve mobility and flexibility.
                         </p>
 
-                        <button class="btn btn-warning">View Details</button>
+                        <a href="{{url('enrollpilates')}}" class="btn-wrapper">
+                            <button class="btn btn-warning">Enroll Now</button>
+                        </a>
+
                     </div>
                 </div>
 
@@ -240,7 +248,10 @@
                         <h3>Wunda Chair Pilates</h3>
                         <p>A compact piece of equipment that looks like a small chair with springs. It allows for
                             various exercises that target the core, legs, and arms.</p>
-                        <button class="btn btn-warning">View Details</button>
+                        <a href="{{url('enrollpilates')}}" class="btn-wrapper">
+                            <button class="btn btn-warning">Enroll Now</button>
+                        </a>
+
 
                     </div>
                 </div>
@@ -251,7 +262,10 @@
                         <h3>Pilates for Athletes</h3>
                         <p>Tailored to athletes, focusing on building core strength, stability, and flexibility, while
                             also enhancing performance and preventing injuries</p>
-                        <button class="btn btn-warning">View Details</button>
+                        <a href="{{url('enrollpilates')}}" class="btn-wrapper">
+                            <button class="btn btn-warning">Enroll Now</button>
+                        </a>
+
 
                     </div>
                 </div>
@@ -262,7 +276,10 @@
                         <h3>Pilates for Rehabilitation</h3>
                         <p>A modified Pilates approach designed for individuals recovering from injury or surgery.
                             Focuses on improving movement patterns, mobility, and rebuilding strength.</p>
-                        <button class="btn btn-warning">View Details</button>
+                        <a href="{{url('enrollpilates')}}" class="btn-wrapper">
+                            <button class="btn btn-warning">Enroll Now</button>
+                        </a>
+
 
                     </div>
                 </div>

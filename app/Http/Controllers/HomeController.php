@@ -85,6 +85,7 @@ public function enrollstore(Request $request){
             'coachprefer' => 'required|string',
             'sessiontrain' => 'required|string',
             'paymentmethod' => 'required|string',
+            'paymentmethod'=> 'required|string'
         ]);
 
 
@@ -96,6 +97,8 @@ public function enrollstore(Request $request){
         $subscription->coachprefer = $request->coachprefer;
         $subscription->sessiontrain = $request->sessiontrain;
         $subscription->paymentmethod = $request->paymentmethod;
+        $subscription->typeoftraining = $request->typeoftraining;
+        $subscription->prefertime = $request->prefertime;
         $subscription->status = 'Pending';
 
      if (Auth::id()) {
@@ -128,4 +131,35 @@ public function enrolllistview(){
 
     return view('Member.enrollrequest',compact('data'));
 }
+
+
+
+
+
+
+
+
+
+
+
+public function enrollpilate(){
+
+    return view('Member.enrollpilate');
+}
+
+
+
+public function enrollzumba (){
+
+    return view('Member.enrollzumba');
+}
+
+public function enrollcardio(){
+    return view('Member.enrollcardio');
+}
+
+
+
+
+
 }

@@ -188,6 +188,100 @@
 
 
 
+        <section class="main section" id="mains">
+
+            <h1 class="yogaas">Yoga</h1>
+
+            <div class="yogacards-container">
+                <div class="yogacards">
+                    <img src="othercss/imagesss/zumba/1.jpg" alt="">
+                    <div class="infocard">
+                        <h3>Zumba Fitness
+
+                        </h3>
+
+                        <p>Zumba involves continuous movement that strengthens the heart and improves blood circulation.
+                        </p>
+                        <a href="{{url('enrollzumbaa')}}">
+                            <button class="btn btn-warning">Enroll Now</button>
+
+                        </a>
+                    </div>
+                </div>
+
+                <div class="yogacards">
+                    <img src="othercss/imagesss/yoga/vinyasa.jpg" alt="">
+                    <div class="infocard">
+                        <h3>Zumba Toning</h3>
+                        <p>An hour-long Zumba session can burn 300–900 calories, depending on intensity.
+
+                        </p>
+                        <a href="{{url('enrollzumbaa')}}">
+                            <button class="btn btn-warning">Enroll Now</button>
+
+                        </a>
+                    </div>
+                </div>
+
+                <div class="yogacards">
+                    <img src="othercss/imagesss/yoga/astanga.jpg" alt="">
+                    <div class="infocard">
+                        <h3>Aqua Zumba
+                        </h3>
+                        <p>Choreographed moves enhance hand-eye coordination and overall balance.</p>
+
+                        <a href="{{url('enrollzumbaa')}}">
+                            <button class="btn btn-warning">Enroll Now</button>
+
+                        </a>
+                    </div>
+                </div>
+
+
+
+                <div class="yogacards">
+                    <img src="othercss/imagesss/yoga/iyengar.jpg" alt="">
+                    <div class="infocard">
+                        <h3>Zumba Gold</h3>
+                        <p>Some Zumba programs, like Toning or Step, incorporate resistance for muscle strengthening.
+                        </p>
+                        <a href="{{url('enrollzumbaa')}}">
+                            <button class="btn btn-warning">Enroll Now</button>
+
+                        </a>
+                    </div>
+                </div>
+
+                <div class="yogacards">
+                    <img src="othercss/imagesss/yoga/bikram.jpg" alt="">
+                    <div class="infocard">
+                        <h3>Zumba Kids</h3>
+                        <p>Classes are community-oriented, providing opportunities to meet and interact with others.</p>
+                        <a href="{{url('enrollzumbaa')}}">
+                            <button class="btn btn-warning">Enroll Now</button>
+
+                        </a>
+                    </div>
+                </div>
+
+                <div class="yogacards">
+                    <img src="othercss/imagesss/yoga/kundami.jpg" alt="">
+                    <div class="infocard">
+                        <h3>Zumba Kids Jr.</h3>
+                        <p>Programs cater to beginners, older adults, children, and even advanced fitness enthusiasts.
+
+                        </p>
+                        <a href="{{url('enrollzumbaa')}}">
+                            <button class="btn btn-warning">Enroll Now</button>
+
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
 
 
 

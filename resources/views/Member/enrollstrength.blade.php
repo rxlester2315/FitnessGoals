@@ -325,6 +325,20 @@
 
                     <label for="number">Number:</label>
                     <input type="number" name="phone_number" placeholder="Enter Number" required>
+                    <label for="typetraining">Type Of Training</label>
+                    <select name="typeoftraining">
+                        <option value="Yoga">Yoga Training</option>
+                        <option value="Pilates">Pilates Training</option>
+                        <option value="Strength">Strength Training</option>
+                        <option value="Zumba">Zumba Training</option>
+                        <option value="Cardio">Cardio Training</option>
+                    </select>
+
+                    <div class="setime">
+                        <label for="time">Select a time:</label>
+                        <input type="time" id="appt" name="prefertime">
+                    </div>
+
 
                 </div>
 
