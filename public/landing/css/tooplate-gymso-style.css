@@ -1214,24 +1214,6 @@ ul.socialacc a:hover i {
     text-align: center;
 }
 
-.cardsession input:checked + .card-content::after {
-    content: "✔";
-    font-size: 15px;
-    color: green;
-    position: absolute;
-    top: 50px;
-    left: 60px;
-    background: #fff;
-    border-radius: 50%;
-    border: 2px solid black;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    margin: 10px;
-    justify-content: center;
-}
-
 .persession {
     display: flex;
     justify-content: center;
@@ -1252,30 +1234,37 @@ ul.socialacc a:hover i {
     border: 3px solid black;
 }
 
-.moreinfoss input {
-    border-radius: 8px;
-    width: 300px;
-    height: 45px;
-    border: 2px solid #404040;
-    margin: 30px;
-}
-
-.moreinfoss select {
-    padding: 10px 50px 10px 50px;
-    border-radius: 8px;
-}
-.moreinfoss {
-    align-items: center;
-    justify-content: center;
-    margin-left: 500px;
-    padding-top: 25px;
-}
-
 .setime input {
     width: 150px;
     height: 50px;
 }
 
+.moreinfoss {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto auto;
+    grid-gap: 100px;
+}
+
+.form-input input {
+    width: 300px;
+    padding: 15px;
+    height: 40px;
+    border-radius: 5px;
+    border: 3px solid grey;
+}
+
+.select-train select {
+    width: 300px;
+    height: 35px;
+    border-radius: 5px;
+    border: 3px solid grey;
+}
+
+.moreinfoss h4 {
+    font-size: 15px;
+    font-weight: 700;
+}
 .cardavail input:checked + .card-content {
     border-color: black;
     background-color: red;
@@ -1432,4 +1421,88 @@ ul.socialacc a:hover i {
 
 .table-classes tbody tr:last-of-type {
     border-bottom: 3px solid #f13a11;
+}
+
+.list-clients table {
+    width: 100%;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+    border-radius: 10px;
+    overflow: hidden;
+    border-collapse: collapse;
+}
+.list-clients thead {
+    background-color: #2d2d2d;
+    color: white;
+    font-weight: bold;
+}
+
+.list-clients tbody tr:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+.thead-clients th,
+td {
+    padding: 12px;
+    border-bottom: 2px solid #ddd;
+}
+
+.thead-clients td {
+    color: #333;
+}
+
+.container-dashinfo {
+    display: flex;
+    flex-direction: row;
+    grid-gap: 200px;
+    justify-content: center;
+}
+
+.dash-items {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px 50px 10px 50px;
+    margin-top: 20px;
+    background-color: #2d2d2d;
+    color: white;
+}
+
+.dash-items i,
+span {
+    justify-content: center;
+    display: flex;
+}
+
+.dash-items i {
+    font-size: 20px;
+    color: red;
+}
+
+.table-list table {
+    width: 80%;
+    border-collapse: collapse;
+    font-size: 18px;
+    text-align: left;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.table-list thead {
+    background-color: #212122;
+    color: white;
+    font-weight: bold;
+}
+
+.table-list td,
+th {
+    padding: 15px;
+    border-bottom: 1px solid grey;
+}
+
+.table-list tbody tr:hover {
+    background-color: #ece2e2;
+    cursor: pointer;
+    color: rgb(10, 10, 10);
 }

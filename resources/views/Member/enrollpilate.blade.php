@@ -318,30 +318,42 @@
 
                 <h2 class="sessionssz">Information</h2>
                 <div class="moreinfoss">
-                    <label for="name">Name:</label>
-                    <input type="text" name="name" placeholder="Enter Name" required>
-                    <label for="email">Email:</label>
-                    <input type="email" name="email" placeholder="Enter Email" required>
 
-                    <label for="number">Number:</label>
-                    <input type="number" name="phone_number" placeholder="Enter Number" required>
+                    <div class="form-input">
+                        <h4>Name</h4>
 
-                    <label for="typetraining">Type Of Training</label>
-                    <select name="typeoftraining">
-                        <option value="Yoga">Yoga Training</option>
-                        <option value="Pilates">Pilates Training</option>
-                        <option value="Strength">Strength Training</option>
-                        <option value="Zumba">Zumba Training</option>
-                        <option value="Cardio">Cardio Training</option>
-                    </select>
+                        <input type="text" name="name" placeholder="Enter Name" required>
 
-
-                    <div class="setime">
-                        <label for="time">Select a time:</label>
-                        <input type="time" id="appt" name="prefertime">
                     </div>
-                </div>
 
+                    <div class="form-input">
+                        <h4>Email Address</h4>
+
+                        <input type="email" name="email" placeholder="Enter Email">
+                    </div>
+
+
+                    <div class="form-input">
+                        <h4>Phone Number</h4>
+
+                        <input type="number" name="phone_number" placeholder="Phone Number">
+                    </div>
+
+
+                    <div class="select-train">
+                        <h4>Type of Training</h4>
+                        <select name="typeoftraining">
+                            <option value="">Select Train Type</option>
+                            <option value="Yoga">Yoga Training</option>
+                            <option value="Pilates">Pilates Training</option>
+                            <option value="Strength">Strength Training</option>
+                            <option value="Zumba">Zumba Training</option>
+                            <option value="Cardio">Cardio Training</option>
+                        </select>
+                    </div>
+
+
+                </div>
 
                 <h2 class="sessionssz">Payment</h2>
 

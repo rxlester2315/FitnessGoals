@@ -201,12 +201,13 @@
                 @csrf
 
                 <div class="availcoach container">
+                    @foreach($coach as $coachs)
                     <label class="cardavail">
-                        <input type="radio" name="coachprefer" value="Justin Baltazar">
+                        <input type="radio" name="coachprefer" value="{{$coachs->name}}">
                         <div class="card-content">
-                            <img src="othercss/imagesss/coach/5.jpg" alt="">
-                            <h3 class="namecoach">Justin Baltazar</h3>
-                            <p class="titlez">Strength Coach</p>
+                            <img src="{{ asset('coachimage/' . $coachs->image) }}" alt="{{ $coachs->name }}">
+                            <h3 class="namecoach">{{ $coachs->name }}</h3>
+                            <p class="titlez">{{ $coachs->typecoach }}</p>
                             <div class="infoavail">
                                 <div class="info-item">
                                     <i class="fa-solid fa-dumbbell"></i>
@@ -223,52 +224,7 @@
                             </div>
                         </div>
                     </label>
-
-                    <label class="cardavail">
-                        <input type="radio" name="coachprefer" value="Marie Christ Deva">
-                        <div class="card-content">
-                            <img src="othercss/imagesss/coach/6.jpg" alt="">
-                            <h3 class="namecoach">Marie Christ Deva</h3>
-                            <p class="titlez">Strength Coach</p>
-                            <div class="infoavail">
-                                <div class="info-item">
-                                    <i class="fa-solid fa-dumbbell"></i>
-                                    <p class="info-text">Trainer Experience: 1-4 Years</p>
-                                </div>
-                                <div class="info-item">
-                                    <i class="fa-solid fa-award"></i>
-                                    <ul class="certifications">
-                                        <li>Certified Fitness Trainer (CFT)</li>
-                                        <li>Certified Strength and Conditioning Specialist</li>
-                                        <li>Bodybuilding Specialist Certification</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </label>
-
-                    <label class="cardavail">
-                        <input type="radio" name="coachprefer" value="Kyle Madrigal">
-                        <div class="card-content">
-                            <img src="othercss/imagesss/coach/7.jpg" alt="">
-                            <h3 class="namecoach">Kyle Madrigal</h3>
-                            <p class="titlez">Strength Coach</p>
-                            <div class="infoavail">
-                                <div class="info-item">
-                                    <i class="fa-solid fa-dumbbell"></i>
-                                    <p class="info-text">Trainer Experience: 1-4 Years</p>
-                                </div>
-                                <div class="info-item">
-                                    <i class="fa-solid fa-award"></i>
-                                    <ul class="certifications">
-                                        <li>Certified Fitness Trainer (CFT)</li>
-                                        <li>Certified Strength and Conditioning Specialist</li>
-                                        <li>Bodybuilding Specialist Certification</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </label>
+                    @endforeach
                 </div>
 
                 <h2 class="sessionssz">Select Personal Training Session</h2>
@@ -318,25 +274,38 @@
 
                 <h2 class="sessionssz">Information</h2>
                 <div class="moreinfoss">
-                    <label for="name">Name:</label>
-                    <input type="text" name="name" placeholder="Enter Name" required>
-                    <label for="email">Email:</label>
-                    <input type="email" name="email" placeholder="Enter Email" required>
 
-                    <label for="number">Number:</label>
-                    <input type="number" name="phone_number" placeholder="Enter Number" required>
-                    <label for="typetraining">Type Of Training</label>
-                    <select name="typeoftraining">
-                        <option value="Yoga">Yoga Training</option>
-                        <option value="Pilates">Pilates Training</option>
-                        <option value="Strength">Strength Training</option>
-                        <option value="Zumba">Zumba Training</option>
-                        <option value="Cardio">Cardio Training</option>
-                    </select>
+                    <div class="form-input">
+                        <h4>Name</h4>
 
-                    <div class="setime">
-                        <label for="time">Select a time:</label>
-                        <input type="time" id="appt" name="prefertime">
+                        <input type="text" name="name" placeholder="Enter Name" required>
+
+                    </div>
+
+                    <div class="form-input">
+                        <h4>Email Address</h4>
+
+                        <input type="email" name="email" placeholder="Enter Email">
+                    </div>
+
+
+                    <div class="form-input">
+                        <h4>Phone Number</h4>
+
+                        <input type="number" name="phone_number" placeholder="Phone Number">
+                    </div>
+
+
+                    <div class="select-train">
+                        <h4>Type of Training</h4>
+                        <select name="typeoftraining">
+                            <option value="">Select Train Type</option>
+                            <option value="Yoga">Yoga Training</option>
+                            <option value="Pilates">Pilates Training</option>
+                            <option value="Strength">Strength Training</option>
+                            <option value="Zumba">Zumba Training</option>
+                            <option value="Cardio">Cardio Training</option>
+                        </select>
                     </div>
 
 

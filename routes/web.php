@@ -6,6 +6,9 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Frontdeskcontroller;
+use App\Http\Controllers\CoachController;
+
+
 
 
 
@@ -21,6 +24,9 @@ Route::post('/storgister',[RegisterController::class,'registerStore'])->name('ac
 Route::get('/members',[LoginController::class,'memberview']);
 
 Route::get('/Frontdesk',[LoginController::class,'frontdeskview']);
+
+Route::get('/Coach',[LoginController::class,'coachview']);
+
 
 
 
@@ -84,9 +90,13 @@ Route::post('/storez',[Frontdeskcontroller::class,'storecoach'])->name('storecoa
 
 
 
+// coach
 
+Route::get('list_clients',[CoachController::class,'clients']);
 
+Route::get('approvesubs/{id}',[CoachController::class,'approvesub']);
 
+Route::get('declinesubs/{id}',[CoachController::class,'declinesub']);
 
 
 

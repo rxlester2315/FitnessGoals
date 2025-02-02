@@ -6,6 +6,7 @@ use Auth;
 use Illuminate\Http\Request;
 use Notification;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use App\Models\User; 
 
 use Illuminate\Support\Facades\Notifications;
 use App\Models\Subscription; 
@@ -70,7 +71,9 @@ public function profile(){
 
 public function enrollstrengthview(){
 
-    return view('member.enrollstrength');
+    $coach = User::Where('role_name','Coach')->get();
+
+    return view('member.enrollstrength',compact('coach'));
     
 }
 

@@ -19,7 +19,7 @@ class Frontdeskcontroller extends Controller
 
 
    
-   public function storecoach(Request $request)
+public function storecoach(Request $request)
 {
     $request->validate([
         'name' => 'required|string|max:255',
@@ -28,15 +28,15 @@ class Frontdeskcontroller extends Controller
         'phone_number' => 'required|string|max:15',
         'typecoach' => 'required|string',
         'password' => 'required|string|min:8',
-        'file' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048', // Validate image file
+        'file' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048', // Fix case sensitivity
     ]);
 
     $data = new User;
 
-    if ($request->hasFile('file')) {
-        $image = $request->file('file'); // Access the file properly
+    if ($request->hasFile('file') && $request->file('file')->isValid()) {
+        $image = $request->file('file');
         $imagename = time() . '.' . $image->getClientOriginalExtension();
-        $image->move(public_path('coachimage'), $imagename); // Save the file to the 'coachimage' folder
+        $image->move(public_path('coachimage'), $imagename);
         $data->image = $imagename;
     }
 
@@ -52,5 +52,6 @@ class Frontdeskcontroller extends Controller
 
     return redirect()->back()->with('message', 'Add Coach Successfully');
 }
+
 
 }

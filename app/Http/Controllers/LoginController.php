@@ -27,7 +27,7 @@ class LoginController extends Controller
             $user = Auth::user();
          // Redirect sa may specific route niya once nag login
             $redirectRoutes = [
-                'Coach' => 'Coachs',
+                'Coach' => 'Coach',
                 'Admin' => 'admins',
                 'Front' => 'Frontdesk',
                 'Member' => 'members',
@@ -65,5 +65,11 @@ class LoginController extends Controller
 
         return view('Frontdesk.home');
 
+    }
+
+
+    public function coachview(){
+
+        return view('coach.home');
     }
 }
