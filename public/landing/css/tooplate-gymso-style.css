@@ -1506,3 +1506,74 @@ th {
     cursor: pointer;
     color: rgb(10, 10, 10);
 }
+
+.container-clientss {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.info-clients {
+    border: 1px solid black;
+    border-radius: 12px;
+    /* Black to Deep Red */
+    background: linear-gradient(to right, #000000, #8b0000);
+
+    /* Blood Red to Black */
+    background: linear-gradient(45deg, #ff0000, #8b0000, #000000);
+
+    /* Subtle Angled Gradient */
+    background: linear-gradient(135deg, #000000 0%, #8b0000 50%, #ff0000 100%);
+
+    padding: 20px;
+    margin: 30px;
+    justify-content: space-around;
+    display: flex;
+    grid-gap: 30px;
+    color: white;
+}
+
+.info-clients img {
+    object-fit: cover;
+    width: 100px;
+    height: 100px;
+    max-width: 100%;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+.more-infoclients h4 {
+    font-size: 20px;
+    font-size: bold;
+}
+
+.more-infoclients p {
+    font-size: 15px;
+    font-style: italic;
+    color: white;
+}
+
+.more-infoclients i {
+    font-size: 20px;
+    padding: 10px;
+}
+
+#soc-fb {
+    color: #1877f2;
+}
+
+#soc-gmail {
+    color: #ea4335;
+}
+#soc-chat {
+    color: #34a853;
+}
+.more-infoclients a {
+    margin: 15px;
+    font-size: 10px;
+}
+.more-infoclients span {
+    font-size: 13px;
+    font-weight: bold;
+    font-style: italic;
+}

@@ -11,9 +11,9 @@
         <meta name="keywords" content="">
         <meta name="author" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        <link rel="stylesheet" href="landing/css/bootstrap.min.css">
-        <link rel="stylesheet" href="landing/css/font-awesome.min.css">
-        <link rel="stylesheet" href="landing/css/aos.css">
+        <link rel="stylesheet" href="{{ asset('landing/css/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{asset('landing/css/font-awesome.min.css')}}">
+        <link rel="stylesheet" href="{{asset('landing/css/aos.css')}}">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.min.css"
             integrity="sha512-T7lIYojLrqj7eBrV1NvUSZplDBi8mFyIEGFGdox8Bic92Col3GVrscbJkL37AJoDmF2iAh81fRpO4XZukI6kbA=="
             crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -27,7 +27,7 @@
 
 
         <!-- MAIN CSS -->
-        <link rel="stylesheet" href="landing/css/tooplate-gymso-style.css">
+        <link rel="stylesheet" href="{{asset('landing/css/tooplate-gymso-style.css')}}">
 
         <style>
         /* Style the profile link */
@@ -109,6 +109,49 @@
             display: flex;
             justify-content: center;
 
+        }
+
+        form {
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 15px;
+        }
+
+        .form-input {
+            margin: 50px;
+        }
+
+
+
+        .form-time input {
+            width: 200px;
+
+        }
+
+        button {
+            align-items: center;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            margin: 30px;
+        }
+
+        .icon-image img {
+            width: 100px;
+            object-fit: cover;
+            border: 1px solid white;
+            border-radius: 50%;
+        }
+
+        .form-input h4 {
+            font-size: 13px;
+        }
+
+        .form-input input {
+            border: 1px solid grey;
         }
         </style>
 
@@ -192,50 +235,46 @@
 
         <section class="rytrhme section" id="rythme">
             <center>
-                <h3 style="margin:10px;">List of clients</h3>
+                <h3 style="margin:10px;">Update Time</h3>
 
             </center>
             <div class="container-list-clientt">
+                <form action="{{ url('updatetimes/' . $selectedUser->id) }}" method="POST">
 
-                <table class="table-list">
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Phone</th>
-                            <th>Email</th>
-                            <th>Status</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
+                    @csrf
+                    @method('PUT')
+                    <div class="icon-image">
+                        <img src="{{asset('landing/images/blank.jpg')}}" alt="">
+                    </div>
 
-                    <tbody>
-                        @foreach($clients as $client)
-                        <tr>
-                            <td>{{ $client->name }}</td>
-                            <td>{{ $client->phone_number }}</td>
-                            <td>{{ $client->email }}</td>
-                            <td><span class="badge badge-warning">
-                                    {{ $client->status }}
-                                </span></td>
+                    <div class="form-input">
+                        <h4>Name</h4>
+                        <input type="text" disabled value="{{ $selectedUser->name }}">
+                    </div>
 
-                            <td>
-                                <a style="font-size:10px;" class="btn btn-success"
-                                    href="{{ url('approvesubs', $client->id) }}">Approved</a>
+                    <div class="form-input">
+                        <h4>Email</h4>
+                        <input type="email" disabled value="{{ $selectedUser->email }}">
+                    </div>
 
-                                <a style="font-size:10px;" class="btn btn-danger"
-                                    href="{{ url('declinesubs', $client->id) }}">Declined</a>
-                            </td>
-                        </tr>
-                        @endforeach
+                    <div class="form-input">
+                        <h4>Type Of Training</h4>
+                        <input type="text" disabled value="{{ $selectedUser->typeoftraining }}">
+                    </div>
 
-                        @if($clients->isEmpty())
-                        <tr>
-                            <td colspan="5">No Appointments</td>
-                        </tr>
-                        @endif
-                    </tbody>
+                    <div class="form-input">
+                        <h4>Select Time</h4>
 
-                </table>
+                        <input type="time" id="appointment-time" name="prefertime" min="09:00" max="18:00" step="1800"
+                            required>
+                    </div>
+                    <!-- Add this wrapper around your button -->
+                    <div class="button-container">
+                        <button type="submit" class="btn btn-success">Submit</button>
+                    </div>
+
+                </form>
+
 
             </div>
 
@@ -268,15 +307,17 @@
         <!-- SCRIPTS -->
 
 
-        <script src="landing/js/jquery.min.js"></script>
-        <script src="landing/js/bootstrap.min.js"></script>
-        <script src="landing/js/aos.js"></script>
-        <script src="landing/js/smoothscroll.js"></script>
-        <script src="landing/js/custom.js"></script>
+        <script src=" {{asset('landing/js/jquery.min.js')}}"></script>
+        <script src="{{asset('landing/js/bootstrap.min.js')}}"></script>
+        <script src="{{asset('landing/js/aos.js')}}"></script>
+        <script src="{{asset('landing/js/smoothscroll.js')}}"></script>
+        <script src="{{asset('landing/js/custom.js')}}"></script>
 
 
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js">
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js">
+        </script>
 
 
     </body>

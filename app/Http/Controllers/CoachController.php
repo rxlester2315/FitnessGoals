@@ -41,4 +41,45 @@ public function declinesub($id){
     return redirect()->back()->with('error', 'Subscription not found.');
 }
 
+
+
+public function schedule(){
+
+    $currentuser = auth()->user()->name;
+
+
+    $data = Subscription::where('coachprefer',$currentuser)
+    ->where('status','Approved')
+    ->get();
+    return view('coach.schedule_coaching',compact('data'));
+}
+
+
+public function updatetime($id){
+
+    $selectedUser = Subscription::findOrFail($id);
+
+
+  
+    
+    return view('coach.update-time',compact('selectedUser'));
+}
+
+
+public function updatetimeBend(Request $request, $id) {
+    // Validate the input
+    $request->validate([
+        'prefertime' => 'required|date_format:H:i',
+    ]);
+
+    // Find the subscription by ID
+    $data = Subscription::findOrFail($id);
+
+    // Update the preferred time
+    $data->prefertime = $request->prefertime;
+    $data->save();
+
+    // Redirect with success message
+    return redirect()->back()->with('message', 'Time has been updated successfully');
+}
 }

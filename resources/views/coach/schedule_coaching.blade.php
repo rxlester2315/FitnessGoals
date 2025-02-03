@@ -186,7 +186,9 @@
 
 
 
-        </div>
+
+
+
 
 
 
@@ -195,49 +197,39 @@
                 <h3 style="margin:10px;">List of clients</h3>
 
             </center>
-            <div class="container-list-clientt">
 
-                <table class="table-list">
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Phone</th>
-                            <th>Email</th>
-                            <th>Status</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
 
-                    <tbody>
-                        @foreach($clients as $client)
-                        <tr>
-                            <td>{{ $client->name }}</td>
-                            <td>{{ $client->phone_number }}</td>
-                            <td>{{ $client->email }}</td>
-                            <td><span class="badge badge-warning">
-                                    {{ $client->status }}
-                                </span></td>
 
-                            <td>
-                                <a style="font-size:10px;" class="btn btn-success"
-                                    href="{{ url('approvesubs', $client->id) }}">Approved</a>
 
-                                <a style="font-size:10px;" class="btn btn-danger"
-                                    href="{{ url('declinesubs', $client->id) }}">Declined</a>
-                            </td>
-                        </tr>
-                        @endforeach
+            <div class="container-clientss">
 
-                        @if($clients->isEmpty())
-                        <tr>
-                            <td colspan="5">No Appointments</td>
-                        </tr>
-                        @endif
-                    </tbody>
+                @foreach($data as $datas)
+                <div class="info-clients">
 
-                </table>
+                    <img src="landing/images/blank.jpg" alt="">
+                    <div class="more-infoclients">
+                        <h4>{{$datas->name}}</h4>
+                        <p>{{$datas->typeoftraining}}</p>
+                        <i class="fa-brands fa-facebook-f" id="soc-fb"></i>
+                        <i class="fa-brands fa-square-google-plus" id="soc-gmail"></i>
+                        <i class="fa-brands fa-rocketchat" id="soc-chat"></i>
+                        <span>Schedule Time : 4:30 - 5:30 Pm</span>
+                        <a href="{{ route('update_time', $datas->id) }}" class="btn btn-success">Change Schedule</a>
+
+
+                    </div>
+
+                </div>
+                @endforeach
+
+
+
+
+
+
 
             </div>
+
 
 
 

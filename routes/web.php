@@ -99,6 +99,15 @@ Route::get('approvesubs/{id}',[CoachController::class,'approvesub']);
 Route::get('declinesubs/{id}',[CoachController::class,'declinesub']);
 
 
+Route::get('schedule_list',[CoachController::class,'schedule']);
+
+
+Route::get('update_time/{id}', [CoachController::class, 'updatetime'])->name('update_time');
+
+Route::put('updatetimes/{id}',[CoachController::class,'updatetimeBend']);
+
+
+
 
 
 

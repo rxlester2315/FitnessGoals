@@ -143,7 +143,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="#schedule" class="nav-link smoothScroll">My Schedule</a>
+                            <a href="{{url('schedule_list')}}" class="nav-link smoothScroll">List Schedule</a>
                         </li>
 
                         <li class="nav-item">
